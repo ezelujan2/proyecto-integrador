@@ -5,7 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://e1.pxfuel.com/desktop-wallpaper/362/145/desktop-wallpaper-texturas-fondos-de-pantalla-espacio-estrellas-galaxias-nebulosa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
