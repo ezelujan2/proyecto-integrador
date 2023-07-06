@@ -14,11 +14,35 @@
     font-size: 25px;
     font-weight: bolder;
    }
-
    .input:active {
     box-shadow: 2px 2px 15px rgb(203, 46, 190) inset;
    }
-
+   @media screen and (max-width: 500px) {
+    .input{
+      font-size: 23px;
+    }
+  }
+.elim{
+  display: flex;
+  position: absolute;
+  justify-content: left;
+  background-color: rgb(203, 46, 190);
+  border-radius: 50%;
+  border: double 12px transparent;
+  border-color: black;
+  font-size: 1rem;
+  background-origin: border-box;
+  
+}
+.elim:hover{
+  cursor: pointer;
+}
+@media screen and (max-width: 555px) {
+  .elim{
+      font-size: 0.6rem;
+      border-radius: 45%;
+  }
+}
 .btn {
     justify-content: center;
     align-items: center;
@@ -27,7 +51,7 @@
     background-size: 300% 300%;
     backdrop-filter: blur(1rem);
     border-radius: 5rem;
-    transition: 0.5s;
+    transition: 0.2s;
     animation: gradient_301 5s ease infinite;
     border: double 4px transparent;
     background-image: linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
@@ -35,6 +59,14 @@
     background-clip: content-box, border-box;
     font-size: 20px;
     font-weight: bolder;
+  }
+  @media screen and (max-width: 555px) {
+    .btn{
+      width: 10rem;
+      font-size: 20px;
+      padding-top: 0;
+      border-radius: 20%;
+    }
   }
   
   #container-stars {

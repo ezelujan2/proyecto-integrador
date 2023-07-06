@@ -1,0 +1,28 @@
+.contenedor{
+    display: flex;
+    margin-top: 10rem;
+    height: 30rem;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10rem;
+    background-color: rgb(70, 112, 189);
+}
+.contenedorImagen{
+    width:30%;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+}
+img{
+    border-radius: 10px;;
+}
+.contenedorTexto{
+    width:50%;
+    margin: 5rem;
+    border-radius: 5rem;
+    background-color: rgb(23, 61, 92);
+}

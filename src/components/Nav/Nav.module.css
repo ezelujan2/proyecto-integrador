@@ -1,0 +1,37 @@
+.barra{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #13243e;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    opacity: 0.9;
+    display: flex;
+    justify-content:center;
+    z-index: 10;
+  }
+
+  .bt{
+    height: 55px;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 4rem!important;
+  }
+
+  .log{
+    font-size: 1.2rem;
+    color: black;
+    height: 55px;
+    align-items: center;
+    font-weight: bolder;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    
+  }

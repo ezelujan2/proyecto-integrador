@@ -1,29 +1,61 @@
 .card {
-    width: 40%;
     height: 10%;
     margin: 1rem;
     background: rgb(203, 46, 190);
     border-radius: 50px;
     transition-duration: 500ms;
     opacity: 0.95;
+    width:25rem;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    animation-duration: 2s;
   }
   .card:hover{
-    width: 45%;
-    transition-duration: 1000ms;
-    opacity: 1;
-}
-
-  
+    width: 28rem;
+    animation-duration: 2s;
+  }
+  @media screen and (max-width: 500px) {
+    .card{
+      width:20rem!important;
+      font-size: 1px;
+      color: transparent;
+      opacity: 1;
+      transition-duration: 500ms;
+    }
+    .card:hover{
+      font-size: 1rem!important;
+      color: black;
+      transition-duration: 500ms;
+    }
+    .imagenes{
+      width: 80%!important;
+      height: 100%!important;
+      
+    }
+} 
+  @media screen and (max-width: 900px) {
+    .card{
+      width:28rem;
+    }
+} 
 .imagenes{
     margin: 1rem;
     border-radius: 50%;
     opacity: 0.8;
     transition-duration: 1s;
 }
+@media screen and (max-width: 555px) {
+  .imagenes{
+      width: 50%;
+  }
+}
 
 .card:hover img{
   opacity: 1;
   border-radius: 35%;
   transition-duration: 1s;
+}
+
+.nombre{
+  color:black!important;
+  text-decoration:underline;
 }

@@ -1,0 +1,12 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    height: 25rem;
+    font-size: 5rem;
+    justify-content: center;
+    background-color: rgb(70, 112, 189);
+}
+.detalle{
+    font-size: 1rem!important;
+    }

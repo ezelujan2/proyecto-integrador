@@ -5,7 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://e1.pxfuel.com/desktop-wallpaper/362/145/desktop-wallpaper-texturas-fondos-de-pantalla-espacio-estrellas-galaxias-nebulosa.jpg");
+  background-image: url("../public/19333449.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
