@@ -32,9 +32,8 @@ function App() {
 
    function onSearch(id) {
       let encontrado = false;
-      console.log(typeof(id))
       characters.map((el) => {
-         if (el.id === Number(id)) {encontrado = true};
+         if (el.id == id) {encontrado = true};
       })
       if(encontrado) alert('Este ID ya se encuentra en pantalla') 
       else{

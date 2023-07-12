@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addFav, removeFav } from "../../redux/actions/actions";
 import { useState, useEffect } from "react";
+import { Favorites } from "../Favorites/Favorites";
 
 
 function Card(props) {
@@ -12,8 +13,6 @@ function Card(props) {
 
    let myFavorites = props.myFavorites;
    
-
-
    useEffect(() => {
       myFavorites.forEach((fav) => {
          if (fav.id == props.id) {
@@ -32,6 +31,7 @@ function Card(props) {
          props.addFav(props);
       }
    }
+   
 
    return (
       <div className={estilo.card}>
