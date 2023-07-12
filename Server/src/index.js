@@ -1,5 +1,5 @@
 var http = require("http")
-const pj = require('./utils/data');
+const {getCharById} = require('./controllers/getCharById');
 const { log } = require("console");
 // npm dotenv
 // require("dotenv").config()
@@ -10,19 +10,11 @@ const server = http
 .createServer(((req,res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     const paths = (req.url).split('/') 
-    if(paths[1] === 'rickandmorty' && paths[2] === 'character'){
-        if(paths[3]){
-            const id = paths[3]
-            let personaje = pj.find(elemento => elemento.id === Number(id))
-            res.writeHead(200, {"Content-type" : "application/json"})
-            return res.end(JSON.stringify(personaje))
-            }
-        else{
-            res.writeHead(200, {"Content-type" : "application/json"})
-            return res.end(JSON.stringify(pj))
-        }
-    }
-    res.end(req.url)
+    if(req.url.includes("/rickandmorty/character")){
+    const id = paths[3]
+    log(id)
+    return getCharById(res,id)
+}
 }))
 .listen(3001, "localhost")
 
