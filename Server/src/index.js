@@ -1,7 +1,10 @@
 var http = require("http")
-var fs = require("fs");
+const pj = require('./utils/data');
 const { log } = require("console");
-const pj = require('./utils/data')
+// npm dotenv
+// require("dotenv").config()
+// process.env.PORT ---> nos dara el valor de la variable PORT que tenemos guardado en .env
+
 
 const server = http
 .createServer(((req,res) => {

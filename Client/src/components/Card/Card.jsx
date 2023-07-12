@@ -11,12 +11,12 @@ function Card(props) {
    const [isFav, setIsFav] = useState(false);
 
    let myFavorites = props.myFavorites;
-   console.log(myFavorites)
+   
 
 
    useEffect(() => {
       myFavorites.forEach((fav) => {
-         if (fav.id === props.id) {
+         if (fav.id == props.id) {
             setIsFav(true);
          }
       });
