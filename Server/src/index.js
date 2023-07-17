@@ -1,23 +1,31 @@
-var http = require("http")
-const {getCharById} = require('./controllers/getCharById');
-const { log } = require("console");
-// npm dotenv
-// require("dotenv").config()
-// process.env.PORT ---> nos dara el valor de la variable PORT que tenemos guardado en .env
+const express = require('express');
+const server = express();
+const PORT = 3001;
+const {routerCharacter,login,favorites} = require('./routes/index')
+
+server.use((req, res, next) => {
+   res.header('Access-Control-Allow-Origin', '*');
+   res.header('Access-Control-Allow-Credentials', 'true');
+   res.header(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept'
+   );
+   res.header(
+      'Access-Control-Allow-Methods',
+      'GET, POST, OPTIONS, PUT, DELETE'
+   );
+   next();
+});
 
 
-const server = http
-.createServer(((req,res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    const paths = (req.url).split('/') 
-    if(req.url.includes("/rickandmorty/character")){
-    const id = paths[3]
-    log(id)
-    return getCharById(res,id)
-}
-}))
-.listen(3001, "localhost")
+server.use('/rickandmorty/character', routerCharacter)
+server.use('/rickandmorty/login', login)
+server.use('/rickandmorty/fav',favorites)
+server.use(express.json());
 
-module.exports = {
-    server,
-}
+
+
+
+server.listen(PORT, () => {
+   console.log('Server raised in port: ' + PORT);
+});
