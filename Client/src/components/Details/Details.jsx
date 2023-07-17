@@ -7,7 +7,6 @@ export default function (){
     let[car,setCharacter] = useState('');
     let param = useParams();
     let id = param.id;
-    console.log(param);
     
     useEffect(() => {
         axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
