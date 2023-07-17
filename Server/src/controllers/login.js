@@ -1,10 +1,6 @@
-const express = require('express')
-const login = express.Router();
 const datos = require('../utils/users')
 
-
-
-login.get('/', (req, res) => {
+function login (req, res) {
     const {email, password} = req.query
     let devuelto = false;
 
@@ -16,6 +12,6 @@ login.get('/', (req, res) => {
 
     res.json({access:devuelto})
 
-})
+}
 
 module.exports = login;

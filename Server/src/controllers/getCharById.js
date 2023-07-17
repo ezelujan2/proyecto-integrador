@@ -1,13 +1,12 @@
 const URL = "https://rickandmortyapi.com/api/character/";
 const axios = require("axios")
-const express = require('express')
-const routerCharacter = express.Router();
 
-routerCharacter.get("/:id", (req, res) => {
+
+function routerCharacter (req, res) {
     axios(URL + req.params.id)
     .then(response => {
         const data = response.data;
-        if(!data.id) res.send('no econtre')
+        if(!data.id) res.send('El personaje no fue encontrado')
         else {
         const personaje = {
             id : data.id,
@@ -23,5 +22,5 @@ routerCharacter.get("/:id", (req, res) => {
     .catch(error => {
         if(error.message.includes('404')) res.status(404).send('Not found')
         else res.status(500).send(error.message)})
-})
+}
 module.exports = routerCharacter;
