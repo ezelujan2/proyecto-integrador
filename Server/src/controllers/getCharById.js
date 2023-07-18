@@ -19,7 +19,7 @@ async function  routerCharacter (req, res) {
     
         
     } catch (error) {
-        console.log(error)
+        console.log(error.message)
         if(error.message.includes('404')) res.status(404).send('Not found');
         else res.status(500).send(error.message)
     }
